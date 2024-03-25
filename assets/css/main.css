@@ -87,6 +87,13 @@ input, select, textarea {
 		html, body {
 			min-width: 320px;
 		}
+		.content {
+	   flex-direction: column;
+       align-items: center;
+		}
+		.content img{
+			display: none;
+		}
 
 	}
 
@@ -2655,6 +2662,13 @@ input, select, textarea {
 			.image.main {
 				margin: 2rem 0;
 			}
+			.content {
+			flex-direction: column;
+			align-items: center;
+				}
+		 .content img{
+			display: none;
+		}
 
 		}
 
