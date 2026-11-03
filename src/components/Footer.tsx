@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom'
 import { nav } from '../data'
 
 export default function Footer() {
@@ -6,7 +7,7 @@ export default function Footer() {
       <span>© {new Date().getFullYear()} Abednego Ifedibachukwu Aginam</span>
       <nav>
         {nav.map(([label, href]) => (
-          <a key={href} href={href}>{label}</a>
+          <Link key={href} to={href}>{label}</Link>
         ))}
       </nav>
     </footer>
