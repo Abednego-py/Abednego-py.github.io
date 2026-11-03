@@ -574,6 +574,12 @@ h2 {
   grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
   gap: 22px;
 }
+.stories {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 22px;
+  margin-top: 22px;
+}
 .tile {
   border: 2px solid var(--ink);
   border-radius: 22px;

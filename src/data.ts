@@ -1,12 +1,12 @@
 export type Kind = 'software' | 'data' | 'finance'
 
 export const nav: [string, string][] = [
-  ['Work', '#build'],
-  ['Toolbox', '#tools'],
-  ['Recognition', '#along'],
-  ['Classroom', '#teach'],
-  ['News', '#news'],
-  ['Contact', '#contact'],
+  ['Work', '/#build'],
+  ['Toolbox', '/#tools'],
+  ['Recognition', '/#along'],
+  ['Classroom', '/classroom'],
+  ['News', '/#news'],
+  ['Contact', '/#contact'],
 ]
 
 export const where = ['Lagos', 'Nigeria', 'Fintech', 'Payments', 'POS', 'Data']
@@ -37,7 +37,6 @@ export const shipped: { tag: string; title: string; text: string; stack: string;
   { tag: 'Data · Machine learning', title: 'ML toolkit', text: 'Machine learning work in Python with Pandas, Keras and TensorFlow.', stack: 'Pandas · Keras · TensorFlow', kind: 'data' },
   { tag: 'Data · 2021', title: 'Applied Data Science', text: 'Certificate from WorldQuant University, January to March 2021.', stack: 'WorldQuant University', kind: 'data' },
   { tag: 'Data · Courses', title: 'AI and data courses', text: 'Curriculum and video courses on core data science and AI, plus training for aspiring analysts.', stack: 'GetBundi · Pluralcode', kind: 'data' },
-  { tag: 'Finance · Background', title: 'ERP and finance', text: 'Professional background in Sage ERP consulting, finance reporting and project portfolio management.', stack: 'Sage · Reporting · PPM', kind: 'finance' },
 ]
 
 export const tools = [
@@ -48,13 +47,68 @@ export const tools = [
   { title: 'Tools', items: ['Git', 'Docker', 'Firebase', 'Jenkins', 'CI/CD', 'Vite'] },
 ]
 
-export const tiles: { tag: string; title: string; text: string; count?: { to: number; decimals: number; suffix: string } }[] = [
-  { tag: '2019', title: '4.3/5.0', text: 'B.Sc. Chemical Engineering, Obafemi Awolowo University', count: { to: 4.3, decimals: 1, suffix: '/5.0' } },
-  { tag: '2022', title: 'Udacity Nanodegree', text: 'Full-Stack Developer Nanodegree, April to July 2022' },
-  { tag: 'Qore', title: 'Engineer of the Month', text: 'Recognition received while building at Qore' },
-  { tag: 'GoMyCode', title: 'Instructor / Mentor Recognition', text: 'Recognised for instructional quality and mentorship' },
-  { tag: '2013', title: 'Best Graduating Student', text: 'Secondary school, June 2013' },
-]
+export const tiles: {
+  tag: string;
+  title: string;
+  text: string;
+  count?: { to: number; decimals: number; suffix: string };
+}[] = [
+  {
+    tag: "2019",
+    title: "4.3/5.0",
+    text: "B.Sc. Chemical Engineering, Obafemi Awolowo University",
+    count: { to: 4.3, decimals: 1, suffix: "/5.0" },
+  },
+  {
+    tag: "Mentoring",
+    title: "150",
+    text: "Number of students trained, April 2022 till date",
+    count: { to: 150, decimals: 0, suffix: "" },
+  },
+  {
+    tag: "Qore",
+    title: "Engineer of the Month",
+    text: "Recognition received while building at Qore",
+  },
+  {
+    tag: "GoMyCode",
+    title: "Instructor / Mentor Recognition",
+    text: "Recognised for instructional quality and mentorship",
+  },
+  {
+    tag: "2013",
+    title: "Best Graduating Student",
+    text: "Secondary school, June 2013",
+  },
+];
+
+export const stories: { name: string; role: string; company: string; text: string }[] =
+  [
+    {
+      name: "Jane Nwufo",
+      role: "Data Analyst",
+      company: "International Breweries",
+      text: "Mr Abednego is calm and detailed in his approach to teaching. He takes time to ensure that each student understands the concepts before moving on. His mentorship has been invaluable in my career transition.",
+    },
+    {
+      name: "Clinton John-Anozie",
+      role: "Intern - Android Dev",
+      company: "Qore",
+      text: "I deeply appreciate the mentorship and encouragement I recieved from Mr Abednego. His guidance was invaluable",
+    },
+    {
+      name: "Stephanie Dimson",
+      role: "Career Switcher → Data Analyst",
+      company: "Norland International",
+      text: "I honestly enjoyed every bit of the mentorship program so much that I didn't notice we had done 9 classes already. He made it so easy to follow through that the fear I had literally faded away",
+    },
+    {
+      name: "Kofoworola Shakioye",
+      role: "Career Switcher → Data Analyst",
+      company: "GT Bank",
+      text: "A big shout out to my tutor - Abednego Aginam.",
+    },
+  ];
 
 export const teachFeatured = [
   { n: 'i.', meta: 'GoMyCode · Sep 2022 – Mar 2023', title: 'Instructor / Mentor', text: 'Taught and mentored learners, guided hands-on projects and gave portfolio feedback to build job-ready skills.' },
@@ -79,7 +133,6 @@ export const timeline = [
   { meta: 'Jul 2021 · Certificate', title: 'Pluralsight Website Specialist', text: 'Completed in March 2022.' },
   { meta: 'Jan 2021 · Data', title: 'Applied Data Science, WorldQuant University', text: 'Completed the certificate in March 2021.' },
   { meta: 'Dec 2020 · Position', title: 'Front-End Developer, Envivo', text: 'Turned complex Figma designs into pixel-perfect responsive web apps, until Apr 2021.' },
-  { meta: 'Earlier · Background', title: 'ERP consulting, finance reporting and data science', text: 'Sage ERP consulting, finance reporting, project portfolio management, and data science and analysis projects for banks.' },
 ]
 
 export const links = {
