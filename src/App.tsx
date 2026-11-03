@@ -10,7 +10,7 @@ import SuccessStories from "./components/SuccessStories";
 import Timeline from "./components/Timeline";
 import Toolbox from "./components/Toolbox";
 import Work from "./components/Work";
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { HashRouter as Router, Routes, Route } from "react-router-dom";
 
 const Home = () => {
   return (

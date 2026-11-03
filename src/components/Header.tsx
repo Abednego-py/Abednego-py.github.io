@@ -6,14 +6,15 @@ type Theme = "light" | "dark";
 
 export default function Header() {
   const [theme, setTheme] = useState<Theme | null>(null);
-  const { pathname } = useLocation();
-  const isHome = pathname === "/";
-  const getDestination = (href: string) =>
-    isHome && href.startsWith("/#") ? href.slice(1) : href;
+  const { hash } = useLocation();
 
   useEffect(() => {
     if (theme) document.documentElement.setAttribute("data-theme", theme);
   }, [theme]);
+
+  useEffect(() => {
+    if (hash) document.getElementById(hash.slice(1))?.scrollIntoView();
+  }, [hash]);
 
   const toggle = () => {
     const current: Theme =
@@ -25,23 +26,15 @@ export default function Header() {
   return (
     <header>
       <div className="wrap">
-        <Link className="brand" to={getDestination("/#top")}>
+        <Link className="brand" to="/#top">
           Abednego Aginam
         </Link>
         <nav>
-          {nav.map(
-            ([label, href]) => (
-              isHome ? (
-                <a key={href} href={getDestination(href)}>
-                  {label}
-                </a>
-              ) : (
-                <Link key={href} to={getDestination(href)}>
-                  {label}
-                </Link>
-              )
-            ),
-          )}
+          {nav.map(([label, href]) => (
+            <Link key={href} to={href}>
+              {label}
+            </Link>
+          ))}
           <button
             id="th"
             type="button"
