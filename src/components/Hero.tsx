@@ -3,6 +3,7 @@ import portrait from '../assets/portrait.jpg'
 import portraitMobile from '../assets/portrait-mobile.jpg'
 import { heroNotes, rotating, where } from '../data'
 import { prefersReducedMotion } from '../lib'
+import { Link } from 'react-router-dom'
 
 const delay = (i: number) => ({ '--i': i }) as CSSProperties
 
@@ -52,8 +53,8 @@ export default function Hero() {
           <p className="sub">
             Frontend and Android engineer with 4+ years in fintech and payments, grounded in data science and analytics. Today I build value added solutions using React and Kotlin at Interswitch.
           </p>
-          <a className="btn p" href="#build">See my work</a>
-          <a className="btn" href="#contact">Hire me</a>
+          <Link className="btn p" to="/#build">See my work</Link>
+          <Link className="btn" to="/#contact">Hire me</Link>
           <ul className="notes">
             {heroNotes.map((n) => (
               <li key={n.title}><b>{n.title}</b>{n.text}</li>
